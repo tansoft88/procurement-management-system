@@ -1,0 +1,102 @@
+<?php
+App::uses('InternalDepartmentsController', 'Controller');
+
+/**
+ * TestInternalDepartmentsController *
+ */
+class TestInternalDepartmentsController extends InternalDepartmentsController {
+/**
+ * Auto render
+ *
+ * @var boolean
+ */
+	public $autoRender = false;
+
+/**
+ * Redirect action
+ *
+ * @param mixed $url
+ * @param mixed $status
+ * @param boolean $exit
+ * @return void
+ */
+	public function redirect($url, $status = null, $exit = true) {
+		$this->redirectUrl = $url;
+	}
+}
+
+/**
+ * InternalDepartmentsController Test Case
+ *
+ */
+class InternalDepartmentsControllerTestCase extends CakeTestCase {
+/**
+ * Fixtures
+ *
+ * @var array
+ */
+	public $fixtures = array('app.internal_department');
+
+/**
+ * setUp method
+ *
+ * @return void
+ */
+	public function setUp() {
+		parent::setUp();
+		$this->InternalDepartments = new TestInternalDepartmentsController();
+		$this->InternalDepartments->constructClasses();
+	}
+
+/**
+ * tearDown method
+ *
+ * @return void
+ */
+	public function tearDown() {
+		unset($this->InternalDepartments);
+
+		parent::tearDown();
+	}
+
+/**
+ * testIndex method
+ *
+ * @return void
+ */
+	public function testIndex() {
+
+	}
+/**
+ * testView method
+ *
+ * @return void
+ */
+	public function testView() {
+
+	}
+/**
+ * testAdd method
+ *
+ * @return void
+ */
+	public function testAdd() {
+
+	}
+/**
+ * testEdit method
+ *
+ * @return void
+ */
+	public function testEdit() {
+
+	}
+/**
+ * testDelete method
+ *
+ * @return void
+ */
+	public function testDelete() {
+
+	}
+}
